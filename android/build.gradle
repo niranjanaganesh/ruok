@@ -1,6 +1,6 @@
 android {
-    buildToolsVersion "23.0.1"
-    compileSdkVersion 20
+    buildToolsVersion "23.0.3"
+    compileSdkVersion 23
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -15,9 +15,9 @@ android {
         instrumentTest.setRoot('tests')
     }
     defaultConfig {
-        applicationId "com.barrtwo.ruok"
+        applicationId "com.barrrtwo.ruok"
         minSdkVersion 8
-        targetSdkVersion 20
+        targetSdkVersion 23
     }
 }
 
@@ -68,7 +68,7 @@ task run(type: Exec) {
     }
 
     def adb = path + "/platform-tools/adb"
-    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.barrtwo.ruok/com.barrtwo.ruok.AndroidLauncher'
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.barrrtwo.ruok/com.barrrtwo.ruok.AndroidLauncher'
 }
 
 // sets up the Android Eclipse project, using the old Ant based build.
